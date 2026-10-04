@@ -1,0 +1,7 @@
+{
+	"key.category.truehitbox.truehitbox": "TrueHitbox",
+	"key.truehitbox.cycle_mode": "Cycle extra hitboxes",
+	"truehitbox.mode.all": "TrueHitbox: yellow + green boxes",
+	"truehitbox.mode.yellow_only": "TrueHitbox: yellow box only",
+	"truehitbox.mode.off": "TrueHitbox: extra boxes off"
+}

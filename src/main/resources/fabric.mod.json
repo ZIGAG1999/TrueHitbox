@@ -1,25 +1,35 @@
 {
-  "schemaVersion": 1,
-  "id": "entity-desync-viewer",
-  "version": "${version}",
-  "name": "Entity Desync Viewer",
-  "description": "Render the server-side hitboxes of entities",
-  "authors": [
-    "crazysmc"
-  ],
-  "contact": {
-    "homepage": "https://github.com/crazysmc/entity-desync-viewer",
-    "sources": "https://github.com/crazysmc/entity-desync-viewer",
-    "issues": "https://github.com/crazysmc/entity-desync-viewer/issues"
-  },
-  "icon": "assets/entity-desync-viewer/icon.png",
-  "license": "MIT",
-  "environment": "client",
-  "mixins": [
-    "edv.mixins.json"
-  ],
-  "depends": {
-    "fabricloader": "*",
-    "minecraft": ">=${minecraft_version}"
-  }
+	"schemaVersion": 1,
+	"id": "truehitbox",
+	"version": "${version}",
+	"name": "TrueHitbox",
+	"description": "With hitboxes on (F3+B), also shows the box the client actually hit-checks (yellow) and, when you run the server yourself, the server-side box (green). Purely visual. Fork of Entity Desync Viewer by crazysmc: https://github.com/crazysmc/entity-desync-viewer",
+	"authors": [
+		"ZIGAG1999"
+	],
+	"contributors": [
+		"crazysmc (original Entity Desync Viewer, https://github.com/crazysmc/entity-desync-viewer)"
+	],
+	"contact": {
+		"homepage": "https://github.com/ZIGAG1999/TrueHitbox",
+		"sources": "https://github.com/ZIGAG1999/TrueHitbox",
+		"issues": "https://github.com/ZIGAG1999/TrueHitbox/issues"
+	},
+	"license": "MIT",
+	"icon": "assets/truehitbox/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"client": [
+			"io.github.zigag1999.truehitbox.TrueHitbox"
+		]
+	},
+	"mixins": [
+		"truehitbox.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=${loader_version}",
+		"minecraft": "~${minecraft_version}",
+		"java": ">=25",
+		"fabric-api": "*"
+	}
 }

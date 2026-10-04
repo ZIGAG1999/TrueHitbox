@@ -1,0 +1,15 @@
+{
+	"required": false,
+	"package": "io.github.zigag1999.truehitbox.mixin",
+	"plugin": "io.github.zigag1999.truehitbox.TrueHitboxMixinPlugin",
+	"compatibilityLevel": "JAVA_25",
+	"client": [
+		"EntityHitboxDebugRendererMixin"
+	],
+	"injectors": {
+		"defaultRequire": 0
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	}
+}
