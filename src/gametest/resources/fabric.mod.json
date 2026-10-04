@@ -1,0 +1,15 @@
+{
+	"schemaVersion": 1,
+	"id": "truehitbox-gametest",
+	"version": "1.0.0",
+	"name": "TrueHitbox game tests",
+	"environment": "client",
+	"entrypoints": {
+		"fabric-client-gametest": [
+			"io.github.zigag1999.truehitbox.gametest.TrueHitboxClientGameTest"
+		]
+	},
+	"depends": {
+		"truehitbox": "*"
+	}
+}

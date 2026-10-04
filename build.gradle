@@ -18,6 +18,32 @@ loom {
 	}
 }
 
+fabricApi {
+	// In-game tests in a separate "gametest" source set; they are not part of the mod jar.
+	// Run with: gradlew runClientGameTest
+	configureTests {
+		createSourceSet = true
+		modId = "truehitbox-gametest"
+		enableGameTests = false
+		enableClientGameTests = true
+		eula = true
+	}
+}
+
+// Optional: the same client game test with extra mods loaded, to check compatibility with a mod set.
+// Its run directory is kept between runs, so mod configs (e.g. Iris shader settings) can be put there first;
+// put an eula.txt there too for the dedicated server part. Like runClientGameTest, it clears build/run/clientGameTest.
+// Run with: gradlew runModSetGameTest -PextraMods=<folder with mod jars>
+if (project.hasProperty("extraMods")) {
+	def extraMods = file(project.property("extraMods")).absolutePath
+	loom.runs.register("modSetGameTest") {
+		inherit loom.runs.getByName("clientGameTest")
+		configName = "Mod set game test"
+		runDir "build/run/modSetGameTest"
+		vmArg "-Dfabric.addMods=${extraMods}"
+	}
+}
+
 dependencies {
 	// To change the versions see the gradle.properties file
 	minecraft "com.mojang:minecraft:${project.minecraft_version}"
@@ -47,8 +73,6 @@ tasks.withType(JavaCompile).configureEach {
 }
 
 java {
-	withSourcesJar()
-
 	sourceCompatibility = JavaVersion.VERSION_25
 	targetCompatibility = JavaVersion.VERSION_25
 }
