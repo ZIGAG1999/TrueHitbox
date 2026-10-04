@@ -71,14 +71,20 @@ entities. If that is confusing, change `yellow_color`.
 TrueHitbox only draws boxes. It does not change hitboxes, targeting, reach,
 attacks or movement, sends nothing to the server and has no networking, so it
 behaves the same on any server. It adds to vanilla's F3+B rendering instead
-of replacing it, so it works next to other hitbox mods such as Combat
-Hitboxes and Combat Hitboxes+.
+of replacing it, and is built to work next to other hitbox mods such as
+Combat Hitboxes and Combat Hitboxes+ (not tested together yet).
 
 ## Requirements
 
 - Minecraft 26.3
 - Fabric Loader 0.19.5 or newer
 - Fabric API
+
+## Installing
+
+TrueHitbox isn't on Modrinth or CurseForge. Build the jar yourself (see
+Building below) and put `build/libs/truehitbox-<version>.jar` in your
+instance's `mods` folder next to Fabric API.
 
 ## Credits
 

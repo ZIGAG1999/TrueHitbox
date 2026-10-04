@@ -3,3 +3,8 @@
 
 build/
 run/
+
+# Local working notes for AI-assisted development
+AGENTS.md
+RESEARCH.md
+TASKS.md
